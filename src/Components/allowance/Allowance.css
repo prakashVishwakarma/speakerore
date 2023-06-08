@@ -1,0 +1,17 @@
+.allowance_container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #24754F;
+    color: white;
+    /* font-family: 'Inter'; */
+}
+.allowance_container_left{
+    margin: 10px;
+    
+}
+.allowance_container_left > p {
+    font-size: .8em;
+    margin-top: 5px;
+    color: #ECECEC;
+    font-family: sans-serif;
+}

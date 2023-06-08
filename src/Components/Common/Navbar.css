@@ -1,0 +1,85 @@
+.Navbar_coontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Navbar_logo>img {
+    margin: 0px 0px 0px 10px;
+}
+
+.Navbar_hambergure_icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Navbar_hambergure_icon>h6 {
+    color: rgb(30, 109, 39);
+    font-family: sans-serif;
+
+}
+
+.Navbar_hambergure_icon>img {
+    width: 20px;
+    margin: 5px;
+}
+
+/* -----------------Navbar_sidebar-------------- */
+
+.Navbar_sidebar {
+    width: 70%;
+    height: 100vh;
+    background-color: #E4E4E4;
+    position: absolute;
+    top: 36px;
+    right: -70%;
+    display: none;
+    /* box-shadow: -20px 30px 100px 0px #e4ffd8; */
+
+    /* transition: transform 0.3s; */
+}
+
+.Navbar_sidebar>div>div {
+    position: relative;
+}
+
+.Navbar_sidebar>div>div>img {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+
+}
+
+.Navbar_inputfield {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.Navbar_inputfield>div {
+    width: 80%;
+    margin-top: 100px;
+    /* justify-content: center; */
+}
+
+.Navbar_inputfield>div>input {
+    height: 30px;
+    width: 90%;
+    margin: 10px 0px 10px 0px;
+    border-radius: 5px;
+    border: none;
+    padding: 0px 10px 0px 10px;
+}
+
+
+.Navbar_inputfield>div>input:nth-child(1) {
+    background-color: #EF7676;
+}
+
+
+.white_text::placeholder {
+    color: white !important;
+}
