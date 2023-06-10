@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import logo from '../../assets/img/logo.jpg'
 import hambergure_icon from '../../assets/img/hamburger_icon.jpg'
 import './Navbar.css'
+import LoginSignupPopup from '../LoginSignupPopup/LoginSignupPopup'
 
 const Navbar = () => {
     const [sidebarToggle, setSidebarToggle] = useState(true)
@@ -11,9 +12,9 @@ const Navbar = () => {
         const box = NavbarboxRef.current;
         // Apply initial styles
         box.style.transition = 'transform 0.3s ease-in-out';
-        box.style.transform = sidebarToggle && 'translateX(70%)' ;
-        box.style.right = !sidebarToggle && '-21%' ;
-        box.style.display = sidebarToggle ?  'block':'none' ;
+        box.style.transform = sidebarToggle && 'translateX(70%)';
+        box.style.right = !sidebarToggle && '-21%';
+        box.style.display = sidebarToggle ? 'block' : 'none';
 
         // Delay style changes to ensure initial styles are applied before transition
         setTimeout(() => {
@@ -34,25 +35,26 @@ const Navbar = () => {
                 <img src={hambergure_icon} alt="" />
             </div>
         </div>
-        {
-            // !sidebarToggle &&
-            <div ref={NavbarboxRef} id='Navbar_sidebar_id' className='Navbar_sidebar'>
-                <div>
-                    <div>
+        {!sidebarToggle && (<div onClick={() => handleToggle()} className="Navbar_sidebar_empty_div"></div>)}
 
-                        <img src={logo} alt="" />
-                    </div>
-                    <div className='Navbar_inputfield'>
-                        <div>
-                            <input type="text" placeholder='Events' className='white_text' name="Events" id="" />
-                            <input type="text" placeholder='Create new event' name="Create new event" id="" />
-                            <input type="text" placeholder='Upgrade' name="Upgrade" id="" />
-                            <input type="text" placeholder='View Profile' name="View Profile" id="" />
-                        </div>
+        <div ref={NavbarboxRef} id='Navbar_sidebar_id' className='Navbar_sidebar'>
+            <div>
+                <div>
+
+                    <img src={logo} alt="" />
+                </div>
+                <div className='Navbar_inputfield'>
+                    <div>
+                        <input type="text" placeholder='Events' className='white_text' name="Events" id="" />
+                        <input type="text" placeholder='Create new event' name="Create new event" id="" />
+                        <input type="text" placeholder='Upgrade' name="Upgrade" id="" />
+                        <input type="text" placeholder='View Profile' name="View Profile" id="" />
                     </div>
                 </div>
             </div>
-        }
+        </div>
+
+        {/* <LoginSignupPopup/> */}
     </>
     )
 }

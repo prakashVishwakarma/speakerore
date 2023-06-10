@@ -39,6 +39,15 @@
     /* transition: transform 0.3s; */
 }
 
+.Navbar_sidebar_empty_div{
+    position: absolute;
+
+    top: 36px;
+    left: 0%;
+    width: 30%;
+    height: 100vh;
+    background-color: #59ff0000;
+}
 .Navbar_sidebar>div>div {
     position: relative;
 }

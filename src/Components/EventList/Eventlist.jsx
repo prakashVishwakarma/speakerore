@@ -49,6 +49,8 @@ const Eventlist = () => {
         <hr />
         {/* {
             filterToggle && */}
+            {!filterToggle && (<div onClick={() => handleToggle()} className="Eventlist_filter_sidebar_empty_div"></div>)}
+
         <div ref={NavbarboxRefFilter} className="Eventlist_filter_sidebar">
             <div className="Eventlist_filter_sidebar_fluid">
                 <h3>Filter</h3>
@@ -94,17 +96,6 @@ const Eventlist = () => {
         {/* } */}
 
         {/* use map funtion here */}
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
-        <EventlistInfo />
         <EventlistInfo />
         <EventlistInfo />
     </>
